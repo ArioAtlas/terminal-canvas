@@ -5,8 +5,8 @@ export abstract class CanvasApp {
   private frameRate: number;
   private intervalId: NodeJS.Timeout | null = null;
 
-  constructor(width: number, height: number, frameRate: number = 30) {
-    this.canvas = new Canvas(width, height);
+  constructor(width: number, height: number, charWidth: number = 1, frameRate: number = 30) {
+    this.canvas = new Canvas(width, height, charWidth);
     this.frameRate = frameRate;
   }
 

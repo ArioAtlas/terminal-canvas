@@ -1,9 +1,11 @@
 export class Canvas {
   private _width: number;
   private _height: number;
+  private charWidth: number;
   private buffer: string[][];
 
-  constructor(width: number, height: number) {
+  constructor(width: number, height: number, charWidth: number = 1) {
+    this.charWidth = charWidth;
     this._width = width;
     this._height = height;
     this.buffer = Array.from({ length: height }, () => Array(width).fill(' '));
@@ -23,7 +25,7 @@ export class Canvas {
     console.clear();
     for (const [y, row] of this.buffer.entries()) {
       for (const [x, value] of row.entries()) {
-        process.stdout.cursorTo(x, y);
+        process.stdout.cursorTo(x * this.charWidth, y);
         process.stdout.write(value);
       }
     }

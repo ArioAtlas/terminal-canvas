@@ -10,7 +10,7 @@
     "test": "jest",
     "start": "node dist/index.js",
     "build": "tsc",
-    "dev": "ts-node src/examples/basic.ts"
+    "dev": "ts-node src/examples/bitmap.ts"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
@@ -30,5 +30,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "sharp": "^0.33.4"
+  }
 }
