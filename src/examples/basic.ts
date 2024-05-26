@@ -1,48 +1,34 @@
-import { Canvas } from '../canvas';
-import { Animation } from '../animation';
+import { CanvasApp } from '../canvas-app';
 
-const canvas = new Canvas(20, 10);
+class BasicExample extends CanvasApp {
+  private x: number = 0;
+  private y: number = 5;
+  private direction: number = 1;
 
-const frames: Array<Array<[number, number, string]>> = [
-  [
-    [0, 5, '*'],
-    [1, 5, '*'],
-    [2, 5, '*'],
-    [3, 5, '*'],
-    [4, 5, '*'],
-  ],
-  [
-    [1, 5, '*'],
-    [2, 5, '*'],
-    [3, 5, '*'],
-    [4, 5, '*'],
-    [5, 5, '*'],
-  ],
-  [
-    [2, 5, '*'],
-    [3, 5, '*'],
-    [4, 5, '*'],
-    [5, 5, '*'],
-    [6, 5, '*'],
-  ],
-  [
-    [3, 5, '*'],
-    [4, 5, '*'],
-    [5, 5, '*'],
-    [6, 5, '*'],
-    [7, 5, '*'],
-  ],
-  [
-    [4, 5, '*'],
-    [5, 5, '*'],
-    [6, 5, '*'],
-    [7, 5, '*'],
-    [8, 5, '*'],
-  ],
-];
+  setup(): void {
+    // Initialize any state here
+    this.x = 0;
+    this.y = 5;
+    this.direction = 1;
+  }
 
-const animation = new Animation(canvas, frames, 500);
+  draw(): void {
+    // Update state and draw the current frame
+    this.canvas.setPixel(this.x, this.y, '💃🏼');
 
-animation.play().then(() => {
+    this.x += this.direction;
+    if (this.x >= this.canvas.width || this.x < 0) {
+      this.direction *= -1;
+    }
+  }
+}
+
+// Create and start the example app
+const app = new BasicExample(80, 60);
+app.start();
+
+// Stop the example after 10 seconds
+setTimeout(() => {
+  app.stop();
   console.log('Animation finished');
-});
+}, 30000);
