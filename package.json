@@ -1,0 +1,33 @@
+{
+  "name": "terminal-canvas",
+  "version": "0.0.1",
+  "description": "a versatile tool that transforms your terminal into a dynamic canvas for creating pixelated animations and pixel art.",
+  "main": "index.js",
+  "repository": "git@github.com:ArioAtlas/terminal-canvas.git",
+  "author": "Omid Golshan <omid.gt21@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "dev": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@typescript-eslint/eslint-plugin": "6.21.0",
+    "@typescript-eslint/parser": "6.21.0",
+    "eslint": "8.48.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "17.1.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-prettier": "5.0.1",
+    "prettier": "3.1.0",
+    "prettier-eslint": "16.2.0",
+    "prettier-eslint-cli": "8.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+  }
+}
