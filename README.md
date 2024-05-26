@@ -8,7 +8,7 @@ TerminalCanvas is a versatile tool that transforms your terminal into a dynamic 
 * **Lightweight:** Minimal dependencies and easy to set up.
 
 ## Getting Started:
-1. Clone the repository: git clone https://github.com/yourusername/TerminalCanvas.git
+1. Clone the repository: git clone https://github.com/ArioAtlas/terminal-canvas.git
 Follow the setup instructions in the README file.
 2. Start creating your terminal animations and pixel art!
 3. Join the TerminalCanvas community and unleash your creativity in the terminal!
